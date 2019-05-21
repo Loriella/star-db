@@ -3,6 +3,8 @@ import Header from '../header';
 import RandomPlanet from '../random-planet';
 import './app.css';
 import PeoplePage from '../people-page';
+import ErrorButton from '../error-button';
+
 export default class App extends Component {
 
   state = {
@@ -40,6 +42,7 @@ export default class App extends Component {
             onClick={this.toggleRandomPlanet}>
             Toggle Random Planet
           </button>
+          <ErrorButton />
         </div>
 
         <PeoplePage />
