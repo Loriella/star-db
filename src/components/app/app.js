@@ -6,7 +6,7 @@ import PeoplePage from '../people-page';
 import ErrorButton from '../error-button';
 import ErrorIndicator from '../error-indicator';
 import ItemList from "../item-list/item-list";
-import PersonDetails from "../person-details/person-details";
+import ItemDetails from "../item-details/item-details";
 import SwapiService from "../../services/swapi-service";
 
 export default class App extends Component {
@@ -64,7 +64,7 @@ export default class App extends Component {
               renderItem={(item) => item.name}/>
           </div>
           <div className="col-md-6">
-            <PersonDetails personId={this.state.selectedPerson}/>
+            <ItemDetails personId={this.state.selectedPerson}/>
           </div>
         </div>
 
@@ -76,7 +76,7 @@ export default class App extends Component {
               renderItem={(item) => item.name}/>
           </div>
           <div className="col-md-6">
-            <PersonDetails personId={this.state.selectedPerson}/>
+            <ItemDetails personId={this.state.selectedPerson}/>
           </div>
         </div>
 
