@@ -39,9 +39,9 @@ export default class App extends Component {
 
             <PersonDetails itemId={3} />
 
-            <PlanetDetails itemId={5} />
+            <PlanetDetails itemId={2} />
 
-            <StarshipDetails itemId={9} />
+            <StarshipDetails itemId={5} />
 
             <PersonList />
 
