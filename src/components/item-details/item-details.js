@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
+import ErrorButton from '../error-button/error-button';
 import './item-details.css';
-import SwapiService from '../../services/swapi-service';
-import ErrorButton from "../error-button/error-button";
 
 const Record = ({ item, field, label }) => {
   return (
@@ -18,8 +17,6 @@ export {
 
 export default class ItemDetails extends Component {
 
-  swapiService = new SwapiService();
-
   state = {
     item: null,
     image: null
@@ -30,7 +27,9 @@ export default class ItemDetails extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.itemId !== prevProps.itemId) {
+    if (this.props.itemId !== prevProps.itemId ||
+      this.props.getData !== prevProps.getData ||
+      this.props.getImageUrl !== prevProps.getImageUrl) {
       this.updateItem();
     }
   }
