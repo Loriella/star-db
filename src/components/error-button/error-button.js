@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './error-button.css';
 
 export default class ErrorButton extends Component {
 
